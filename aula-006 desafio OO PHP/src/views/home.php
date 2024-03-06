@@ -30,11 +30,32 @@
     </div>
    
     <div style="display: flex;gap: 250px">
-        <pre>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>matricula</th>
+                    <th>Curso</th>
+                    <th>Editar</th>
+                </tr>
+            </thead>
+            <tbody>
             <?php 
-                print_r($CC->getAlunos());
+                $info = $CC->getAlunos();
+                foreach ($info as $key => $value) {
+                    
+                    ?>
+                        <tr>
+                            <th><?php echo $value['nome'] ?></th>
+                            <th><?php echo $value['matricula'] ?></th>
+                            <th><?php echo $value['curso'] ?></th>
+                            <th><a href="index.php?pagina=Edit&id=<?php echo  $value['id']?>">Editar</a></th>
+                        </tr>
+                    <?php 
+                }
             ?>
-        </pre>
+            </tbody>
+        </table>
     </div>
     <div>
 
