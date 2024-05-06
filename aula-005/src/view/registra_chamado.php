@@ -1,7 +1,7 @@
 <?php
 // registra_chamado.php
 session_start();
-require_once "./validador_acesso.php";
+require_once "../../validador_acesso.php";
 
 // O restante do código permanece o mesmo, mas você pode querer otimizar o código CSS e HTML.
 

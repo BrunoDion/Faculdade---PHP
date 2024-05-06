@@ -5,7 +5,7 @@ require_once "../../validador_acesso.php";
 $chamados = array();
 
 //abrir o arquivo.hd
-$arquivo = fopen('../../arquivo.txt', 'r');
+$arquivo = fopen('../../arquivo.hd', 'r');
 
 //enquanto houver registros (linhas) a serem recuperados
 while(!feof($arquivo)) { //testa pelo fim de um arquivo
